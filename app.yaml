@@ -1,5 +1,5 @@
 application: kaipzubko
-version: 20150507
+version: 20150507b
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -13,9 +13,14 @@ handlers:
   script: main.app
   login: admin
 
-- url: /get/.*
-  script: main.app
+#- url: /get/.*
+#  script: main.app
   
+- url: /get/(.*?)/(.*)
+  script: main.app
+  http_headers:
+    X-Kaip-Zubko: !
+
 - url: .*
   script: main.app
   login: admin

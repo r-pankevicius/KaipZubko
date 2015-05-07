@@ -1,5 +1,6 @@
 import urllib
 import webapp2
+import logging
 from google.appengine.ext import blobstore,db
 from google.appengine.ext.blobstore import BlobInfo
 from google.appengine.ext.webapp import blobstore_handlers 
@@ -11,6 +12,7 @@ class MainHandler(webapp2.RequestHandler):
   def get(self):
     respond = self.response.out.write
     upload_url = blobstore.create_upload_url('/upload')
+	# TODO: convert to templates
     page = '<html><body>'
     files = FileRecord.all()
     if files.count():
@@ -19,8 +21,8 @@ class MainHandler(webapp2.RequestHandler):
         date = str(record.blob.creation)
         key = record.key().id()
         filename = record.blob.filename
-        size = str(round(float(record.blob.size) / 1024 / 1024,3)) + ' Mb'
-        page += '<tr><td>%s</td><td>%s</td><td><a href="/get/%s">' % (date,size,key)
+        size = str(round(float(record.blob.size) / 1024 / 1024, 3)) + ' Mb'
+        page += '<tr><td>%s</td><td>%s</td><td><a href="/get/%s/%s">' % (date,size,key,filename)
         page += '%s</a></td><td><a href="/delete/%s">' % (filename,key)
         page += 'Delete</a></td></tr>' 
       page += '</table><br>'
@@ -37,7 +39,8 @@ class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
     self.redirect('/')
 
 class GetHandler(blobstore_handlers.BlobstoreDownloadHandler):
-  def get(self, blob_key):
+  def get(self, blob_key, filename):
+    logging.info('GetHandler blob_key=%s filename=%s' % (blob_key, filename))
     blob_key = str(urllib.unquote(blob_key))
     record = FileRecord.get_by_id(int(blob_key))
     # set content type and open file instead of download
@@ -60,5 +63,5 @@ app = webapp2.WSGIApplication(
           [('/', MainHandler),
            ('/upload', UploadHandler),
            ('/delete/([^/]+)?', DeleteHandler),
-           ('/get/([^/]+)?', GetHandler),
-          ], debug=False)
+           ('/get/([^/]+)?/([^/]+)?', GetHandler),
+          ], debug=True)
