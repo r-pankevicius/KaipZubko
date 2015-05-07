@@ -18,8 +18,6 @@ handlers:
   
 - url: /get/(.*?)/(.*)
   script: main.app
-  http_headers:
-    X-Kaip-Zubko: !
 
 - url: .*
   script: main.app
