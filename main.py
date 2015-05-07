@@ -40,8 +40,9 @@ class GetHandler(blobstore_handlers.BlobstoreDownloadHandler):
   def get(self, blob_key):
     blob_key = str(urllib.unquote(blob_key))
     record = FileRecord.get_by_id(int(blob_key))
-#    blob_info = blobstore.BlobInfo.get(record.blob.key()))
-    self.send_blob(record.blob,save_as=record.blob.filename)
+    # set content type and open file instead of download
+    self.response.headers['Content-Type'] = record.blob.content_type
+    self.send_blob(record.blob,save_as=False)
     
 class DeleteHandler(webapp2.RequestHandler):
   def get(self,blob_key):
