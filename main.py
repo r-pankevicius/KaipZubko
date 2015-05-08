@@ -49,6 +49,9 @@ class GetHandler(blobstore_handlers.BlobstoreDownloadHandler):
     record = FileRecord.get_by_id(int(blob_key))
     # set content type and open file instead of download
     self.response.headers['Content-Type'] = record.blob.content_type
+    # Add cache headers. Can cache forever because of unique ID in URL
+    self.response.headers["Cache-Control"] = "public"
+    self.response.headers["Cache-Control: max-age"] = 31536000
     self.send_blob(record.blob,save_as=False)
     
 class DeleteHandler(webapp2.RequestHandler):
