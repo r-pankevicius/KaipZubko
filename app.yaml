@@ -1,5 +1,5 @@
 application: kaipzubko
-version: 20150508a
+version: 20150508b
 runtime: python27
 api_version: 1
 threadsafe: true

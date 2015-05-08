@@ -16,7 +16,6 @@
 
 		{% set url = "/get/" + (file.key().id() | string) + "/" + file.blob.filename %}
 		<tr>
-			<td><a href="{{ url }}"><img class="thumbnail" src="{{ url }}" width="107" height="80"></a></td>
 			<td>{{ file.blob.creation }}</td>
 			<td>{{ ((((((file.blob.size)|float)) / 1024 / 1024)|round(3)) |string) + ' Mb'}}</td>
 			<td><a href="{{ url }}">{{ file.blob.filename}}</a></td>
