@@ -9,13 +9,19 @@ class FileRecord(db.Model):
   blob = blobstore.BlobReferenceProperty()
   
 class MainHandler(webapp2.RequestHandler):
+  def getRecordDate(handler, item):
+    return item.blob.creation
+
   def get(self):
     respond = self.response.out.write
     upload_url = blobstore.create_upload_url('/upload')
-	# TODO: convert to templates
+    # TODO: convert to templates
     page = '<html><body>'
-    files = FileRecord.all()
-    if files.count():
+
+    # Order files by date desc
+    files = sorted(FileRecord.all(), key=self.getRecordDate, reverse=True)
+
+    if len(files) != 0:
       page += '<table border="0">'
       for record in files:
         date = str(record.blob.creation)
