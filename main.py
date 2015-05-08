@@ -52,6 +52,7 @@ class GetHandler(blobstore_handlers.BlobstoreDownloadHandler):
     # Add cache headers. Can cache forever because of unique ID in URL
     self.response.headers["Cache-Control"] = "public"
     self.response.headers["Cache-Control: max-age"] = 31536000
+    self.response.headers['Expires'] = 'Thu, 31 Dec 2037 00:00:00 GMT'
     self.send_blob(record.blob,save_as=False)
     
 class DeleteHandler(webapp2.RequestHandler):
