@@ -1,5 +1,5 @@
 application: kaipzubko
-version: 20150508
+version: 20150508a
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -9,6 +9,9 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
   
+- url: /content
+  static_dir: content
+
 - url: /delete/.*
   script: main.app
   login: admin
@@ -22,3 +25,9 @@ handlers:
 - url: .*
   script: main.app
   login: admin
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest

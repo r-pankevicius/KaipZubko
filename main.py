@@ -1,9 +1,18 @@
 import urllib
 import webapp2
 import logging
+import os
+
 from google.appengine.ext import blobstore,db
 from google.appengine.ext.blobstore import BlobInfo
 from google.appengine.ext.webapp import blobstore_handlers 
+
+# Template engine
+import jinja2
+
+JINJA_ENVIRONMENT = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions=['jinja2.ext.autoescape'],
+    autoescape=True)
 
 class FileRecord(db.Model):
   blob = blobstore.BlobReferenceProperty()
@@ -13,29 +22,18 @@ class MainHandler(webapp2.RequestHandler):
     return item.blob.creation
 
   def get(self):
-    respond = self.response.out.write
-    upload_url = blobstore.create_upload_url('/upload')
-    # TODO: convert to templates
-    page = '<html><body>'
 
     # Order files by date desc
     files = sorted(FileRecord.all(), key=self.getRecordDate, reverse=True)
 
-    if len(files) != 0:
-      page += '<table border="0">'
-      for record in files:
-        date = str(record.blob.creation)
-        key = record.key().id()
-        filename = record.blob.filename
-        size = str(round(float(record.blob.size) / 1024 / 1024, 3)) + ' Mb'
-        page += '<tr><td>%s</td><td>%s</td><td><a href="/get/%s/%s">' % (date,size,key,filename)
-        page += '%s</a></td><td><a href="/delete/%s">' % (filename,key)
-        page += 'Delete</a></td></tr>' 
-      page += '</table><br>'
-    page += '<form action="%s" method="POST" enctype="multipart/form-data">' % upload_url
-    page += """Upload File: <input type="file" name="file"><br> <input type="submit" name="submit" 
-    value="Submit"></form></body></html>"""
-    respond(page)
+    template_values = {
+      'files': files,
+      'upload_url': blobstore.create_upload_url('/upload')
+    }
+
+    template = JINJA_ENVIRONMENT.get_template('pages/index.html')
+
+    self.response.out.write(template.render(template_values))
 
 class UploadHandler(blobstore_handlers.BlobstoreUploadHandler):
   def post(self):
@@ -65,9 +63,7 @@ class DeleteHandler(webapp2.RequestHandler):
       self.error(404)
     self.redirect('/')
 
-app = webapp2.WSGIApplication(
-          [('/', MainHandler),
+app = webapp2.WSGIApplication([('/', MainHandler),
            ('/upload', UploadHandler),
            ('/delete/([^/]+)?', DeleteHandler),
-           ('/get/([^/]+)?/([^/]+)?', GetHandler),
-          ], debug=True)
+           ('/get/([^/]+)?/([^/]+)?', GetHandler),], debug=True)

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Freaks</title>
+	<link rel="stylesheet" type="text/css" href="/content/stylesheets/default.css">
+</head>
+<body>
+	<h1>
+		as Zubko & brother
+		<br/>
+		<img src="/content/images/brothers.png" />
+	</h1>
+	<table border="0">
+		{% for file in files %}
+
+		{% set url = "/get/" + (file.key().id() | string) + "/" + file.blob.filename %}
+		<tr>
+			<td><a href="{{ url }}"><img class="thumbnail" src="{{ url }}" width="107" height="80"></a></td>
+			<td>{{ file.blob.creation }}</td>
+			<td>{{ ((((((file.blob.size)|float)) / 1024 / 1024)|round(3)) |string) + ' Mb'}}</td>
+			<td><a href="{{ url }}">{{ file.blob.filename}}</a></td>
+			<td><a href="/delete/{{file.key().id()}}">Delete</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+
+	<br />
+	<form action="{{upload_url}}" method="POST" enctype="multipart/form-data">
+		Upload File: <input type="file" name="file"><br> <input type="submit" name="submit" value="Submit">
+	</form>
+</body>
+</html>
+{% endautoescape %}
