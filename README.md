@@ -1,4 +1,4 @@
-Soon (just in few years) this project (stolen from Sergey Burma) may become a drop box for teams. May. Because it's May now.
+Next generation of distributed file sharing.
 
 ###### About
 File sharing solution for the teams. (We target developer teams at the current state.)
@@ -18,10 +18,7 @@ For business: If you're serving vanilla-js.1.0.js framework and your product own
   1 new commiter in the opening day. 12 active users. Weekend ahead so it should be calm and cool.
   
 ###### Roadmap
-+ Cache headers
 - Split this file: for developers and jump-in users.
 - ...
-- Add Commiters.txt
 - Add "publishers" by email.
 - Next target to steal REST API from: https://github.com/protomouse/appengine-filestore
-
