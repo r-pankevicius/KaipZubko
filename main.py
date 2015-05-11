@@ -50,7 +50,6 @@ class GetHandler(blobstore_handlers.BlobstoreDownloadHandler):
     # set content type and open file instead of download
     self.response.headers['Content-Type'] = record.blob.content_type
     # Add cache headers. Can cache forever because of unique ID in URL
-    # FIXME: seems GAE overrides these headers
     self.response.headers['Cache-Control'] = 'public'
     self.response.headers['Cache-Control: max-age'] = '31536000'
     self.response.headers['Expires'] = 'Thu, 31 Dec 2037 00:00:00 GMT'
