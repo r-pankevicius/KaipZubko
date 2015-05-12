@@ -47,8 +47,10 @@ class GetHandler(blobstore_handlers.BlobstoreDownloadHandler):
     logging.info('GetHandler blob_key=%s filename=%s' % (blob_key, filename))
     blob_key = str(urllib.unquote(blob_key))
     record = FileRecord.get_by_id(int(blob_key))
-    # set content type and open file instead of download
+
+    # Set content type and open file instead of download
     self.response.headers['Content-Type'] = record.blob.content_type
+
     # Add cache headers. Can cache forever because of unique ID in URL
     self.response.headers['Cache-Control'] = 'public'
     self.response.headers['Cache-Control: max-age'] = '31536000'
@@ -70,4 +72,8 @@ class DeleteHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([('/', MainHandler),
            ('/upload', UploadHandler),
            ('/delete/([^/]+)?', DeleteHandler),
-           ('/get/([^/]+)?/([^/]+)?', GetHandler),], debug=True)
+           ('/([^/]+)?/([^/]+)?', GetHandler),
+
+           # Obsolete route handler (retains backward compatibility)
+           # See also app.yaml config "url: /get/(.*?)/(.*)"
+           ('/get/([^/]+)?/([^/]+)?', GetHandler)], debug=True)

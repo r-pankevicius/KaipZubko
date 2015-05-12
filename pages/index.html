@@ -14,7 +14,7 @@
 	<table border="0">
 		{% for file in files %}
 
-		{% set url = "/get/" + (file.key().id() | string) + "/" + file.blob.filename %}
+		{% set url = "/" + (file.key().id() | string) + "/" + file.blob.filename %}
 		<tr>
 			<td>{{ file.blob.creation }}</td>
 			<td>{{ ((((((file.blob.size)|float)) / 1024 / 1024)|round(3)) |string) + ' Mb'}}</td>

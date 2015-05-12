@@ -1,5 +1,5 @@
 application: kaipzubko
-version: 20150511
+version: 20150512
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -16,6 +16,8 @@ handlers:
   script: main.app
   login: admin
 
+# Obsolete route (retains backward compatibility)
+# See also main.py handler "('/get/([^/]+)?/([^/]+)?', GetHandler)"
 - url: /get/(.*?)/(.*)
   script: main.app
 
