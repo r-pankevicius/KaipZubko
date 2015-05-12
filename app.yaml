@@ -1,5 +1,5 @@
 application: kaipzubko
-version: 20150512
+version: 20150512b
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -21,9 +21,12 @@ handlers:
 - url: /get/(.*?)/(.*)
   script: main.app
 
-- url: .*
+- url: /
   script: main.app
   login: admin
+
+- url: /(.*?)/(.*)
+  script: main.app
 
 libraries:
 - name: webapp2
