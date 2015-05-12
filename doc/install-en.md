@@ -1,4 +1,4 @@
-#TODO: convert to MD
+TODO: convert to MD
 
 Kaip Zubko!
 Read as "File sharing like Zubko" in English. Or "File sharing Zubko way". (Zubko is a surname; most probably with roots from Ukraine).
@@ -17,15 +17,23 @@ STEP 1. Set up your cloud web application
 Go to https://appengine.google.com and register. You'll need a mobile phone able to get SMS to enter it somewhere (no need for smart phone).
 Once you can login to https://appengine.google.com, create your application. You have to choose an unique application identifier. Of course, try mykaipzubko first, but if it's taken select another one. Say, mykaipzubko.appspot.com is a place you've got (replace mykaipzubko with your true app id further on).
 
-#TODO: fill blanks
-
 STEP 2. Download "Kaip Zubko!" code
+Go to https://github.com/r-pankevicius/KaipZubko and download zip (icon in the right). On Windows right click the file and unblock it.
+Unzip it to C:\TEMP\KaipZubko folder.
+Edit app.yaml file and change application in the first line from "kaipzubko" to your application ID on Google App Engine (mykaipzubko will be used further in the example as application ID).
 
 STEP 3. Install Python 2.7
+Go to https://www.python.org/downloads/ and download Python 2.7.9 (not version 3!). Run installer and install it.
 
 STEP 4. Install Google AppEngine SDK for Python
+Download the Google App Engine SDK for Python from https://cloud.google.com/appengine/downloads. Run installer and install it.
 
 STEP 5. Publish "Kaip Zubko!" code to mykaipzubko.appspot.com
+Start Google App Engine Launcher, in menu select File, Add Existing Application, choose the folder C:\TEMP\KaipZubko and add it. Select your application in list. Yuo should see somewhat like https://github.com/r-pankevicius/KaipZubko/blob/master/doc/img/gae-launcher.png.
+
+Press "Deploy" button and deploy it to mykaipzubko.appspot.com. The program will ask you to login with google account.
 
 STEP 6. Run "Kaip Zubko!" on mykaipzubko.appspot.com
+Go to https://appengine.google.com/, select your application, open Versions tab and make uploaded version of your application the default one.
 
+That's all. Now you have a "Kaip Zubko!" server running on http://mykaipzubko.appspot.com.
