@@ -16,9 +16,6 @@ handlers:
   script: main.app
   login: admin
 
-#- url: /get/.*
-#  script: main.app
-  
 - url: /get/(.*?)/(.*)
   script: main.app
 
