@@ -38,9 +38,9 @@ Go to https://www.python.org/downloads/ and download Python 2.7.9 (not version 3
 Download the Google App Engine SDK for Python from https://cloud.google.com/appengine/downloads. Run installer and install it.
 
 ###STEP 5. Publish "Kaip Zubko!" code to mykaipzubko.appspot.com
-Start Google App Engine Launcher, in menu select File, Add Existing Application, choose the folder C:\TEMP\KaipZubko and add it. Select your application in list. Yuo should see somewhat like:
+Start Google App Engine Launcher, in menu select File, Add Existing Application, choose the folder C:\TEMP\KaipZubko and add it. Select your application in list. You should see somewhat like:
 
-![alt text](https://github.com/r-pankevicius/KaipZubko/blob/master/doc/img/gae-launcher.png "Title")
+![Nice UI, isn't it?](https://github.com/r-pankevicius/KaipZubko/blob/master/doc/img/gae-launcher.png "Nice UI, isn't it?")
 
 Press "Deploy" button and deploy it to mykaipzubko.appspot.com. The program will ask you to login with google account. Wait till it succeeds telling that "You can close this window now".
 
@@ -49,4 +49,5 @@ Go to https://appengine.google.com/, select your application, open Versions tab 
 
 That's all. Now you have a "Kaip Zubko!" server running on http://mykaipzubko.appspot.com.
 
+###Final words
 Share with care!
