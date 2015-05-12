@@ -2,8 +2,8 @@
 
 Next generation of distributed file sharing.
 
-###### About
-File sharing solution for the teams. (We target developer teams at the current state.)
+###### Inpatient?
+Go to [quick install guide](./doc/install-en.md).
 
 ###### Demo (Live!)
 See how HTML 5 compliant [Admin UI gracefully falls back to classic HTML on legacy browsers](http://kaipzubko.appspot.com/get/5639445604728832/admin-ui-v1.png).
