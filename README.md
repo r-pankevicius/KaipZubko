@@ -5,6 +5,9 @@ Next generation of distributed file sharing.
 ###### Inpatient?
 Go to [quick install guide](./doc/install-en.md).
 
+###### Lietuvis?
+Rimti bičiukai spaudžia [čia](./idiek-lt.md).
+
 ###### Demo (Live!)
 See how HTML 5 compliant [Admin UI gracefully falls back to classic HTML on legacy browsers](http://kaipzubko.appspot.com/get/5639445604728832/admin-ui-v1.png).
 
