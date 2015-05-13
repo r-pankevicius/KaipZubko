@@ -1,4 +1,4 @@
-#Kaip Zubko!
+﻿#Kaip Zubko!
 Naujos kartos failų šarinimo sistema.
 
 <i>"Šitie vaikinai sėja velnio sėklą."</i><br/>
@@ -7,7 +7,7 @@ Naujos kartos failų šarinimo sistema.
 
 Tuoj įdiegsim (jei man į snukį neduosit už šitą žodį), maždaug per 20-60 minučių ir pašarinsit ne blogiau už patį Zubko!
 
-Tik rimtiems bachūriukams! Intymių nesiūlyti!
+Tik rimtiems bachūriukams!
 
 ##Ką čia varai, bičiuks?
 
