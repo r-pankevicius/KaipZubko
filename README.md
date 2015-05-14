@@ -8,7 +8,7 @@ Go to [quick install guide](./doc/install-en.md).
 ###### LT: Lietuvis?
 Rimti bičiukai spaudžia [čia](./doc/install-lt.md).
 
-###### RU: Наш человек инструкцию по инсталяций пока что-то неломается не читает!
+###### RU: Наш человек инструкцию по инсталяции, пока что-то неломается, не читает!
 И [всё таки...](./doc/install-ru.md).
 
 ###### Demo (Live!)
