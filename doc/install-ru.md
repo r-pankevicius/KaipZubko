@@ -8,45 +8,38 @@
 
 Следующее поколение распределенного обмена файлами.
 
->TODO type more Borat script: ШФХЩЭЮЯЗЙЖГ... A tough work...
->http://www.lexilogos.com/keyboard/russian.htm
+Сейчас у тебя есть много гаджетов и в первую очередъ тебе хочется просто обменяться файлами между ними. Хочешь посмотреть фильм из лаптопа или клип и фотки из мобильника на телике? Не так легко сообразить WI-FI сеть дома, когда у тебя на лаптопе виндоза, в кормане самсунг а на телике стоит линуха. Нам это надоело и мы придумали, что файлы надо шарить "Как Зубко!". Не хуже, как ето делает сам Зубко. А потом увидишь что так же просто можно шарить фаилы и с друзями.
 
-Now you have many smart gadgets and first of all you want to share file between them. Want to see a movie from your laptop on smart TV? Do you know how to set up a home wireless network considering your laptop runs Windows, you have iPhone in your pocket and you have a Linux based smart TV (like most of us)? We haven't learned it yet therefore "Kaip Zubko!" project began. Pardon, it's a lie, it actually began because we want to share files between a distributed team of people. But first learn how to share files across your devices and then you can easily switch to team sharing.
+С "Как Зубко!" ты будешь шарить фаилы через клауд.
 
-"Kaip Zubko!" wants to tell you that file sharing via cloud is easier. Even easier than setting up a home network. But make sure that you have a stable Internet plan so you'll get a fixed pay check at the end of the month.
+Сначала ты настоишь клауд сайт, внедрёшь "Как Зубко!" в него. Думаешь это трудно? Спокойно, покажем. Стопудово прокатит, сто раз так делали.
 
-To use "Kaip Zubko!" you'll need to set up a cloud web site. Then you'll install "Kaip Zubko!" application to it. Sounds difficult? We'll show that it's not. Or ask your 13 years old son to do it for you.
+###Шаг 0. Получи Gmail от Google (не gmail.ru а gmail.com!)
+Иди на https://accounts.google.com и зарегиструйся. Мобильный будет нужен для получения SMS.
 
-###STEP 0. Get a Google account
-Get a gmail e-mail address. If you have one then skip this step.
-Go to https://accounts.google.com and register your account. You'll need a mobile phone able to get SMS to enter it somewhere (no need for a smart phone).
+###Шаг 1. Получи клауд сервер
+Иди на https://appengine.google.com и зарегиструйся. Мобильный будет нужен для получения SMS, опять.
+И когда ты сможешь присоединиться к https://appengine.google.com, создади свою аппликацию. Придумай уникальный ID (application identifier). Например, mykaipzubko (дальше в примере).
 
-###STEP 1. Set up your cloud application
-Go to https://appengine.google.com and register. You'll need a mobile phone able to get SMS to enter it somewhere (no need for smart a phone; again).
-Once you can login to https://appengine.google.com, create your application. You have to choose an unique application identifier. Of course, try mykaipzubko first, but if it's taken select another one. Say, mykaipzubko.appspot.com is a place you've got (replace mykaipzubko with your true app id further on).
+###Шаг 2. Скачай "Kaip Zubko!" код
+Иди на https://github.com/r-pankevicius/KaipZubko скачай zip (иконка "Download ZIP" на правой стороне). На виндозе нажми правым клавишом мышки на zip фаил и разблокируй (ну, если незнаешь git clone).
+Распакуй zip в C:\TEMP\KaipZubko папку.
+Поредагуй app.yaml фаил, поменяй application на первой строке из "kaipzubko" на свой application ID.
 
-###STEP 2. Download "Kaip Zubko!" code
-Go to https://github.com/r-pankevicius/KaipZubko and download zip (icon in the right). If you run Windows, right click the file and unblock it.
-Unzip it to C:\TEMP\KaipZubko folder.
-Edit app.yaml file and change application in the first line from "kaipzubko" to your application ID on Google App Engine (mykaipzubko will be used further in the example as application ID).
+###Шаг 3. Внедри Python 2.7
+Иди на https://www.python.org/downloads/ и скачай Python 2.7.9 (не версию 3!). Внедри.
 
-###STEP 3. Install Python 2.7
-Go to https://www.python.org/downloads/ and download Python 2.7.9 (not version 3!). Run installer and install it.
+###Шаг 4. Внедри Google AppEngine SDK for Python
+Скачай из https://cloud.google.com/appengine/downloads. Внедри.
 
-###STEP 4. Install Google AppEngine SDK for Python
-Download the Google App Engine SDK for Python from https://cloud.google.com/appengine/downloads. Run installer and install it.
+###Шаг 5. Загрузи "Kaip Zubko!" код в mykaipzubko.appspot.com
+Запусти Google App Engine Launcher, из меню: File, Add Existing Application, покажи C:\TEMP\KaipZubko папку. Выбери your application in list. свой аппс из списка. Ты должен видеть:
 
-###STEP 5. Publish "Kaip Zubko!" code to mykaipzubko.appspot.com
-Start Google App Engine Launcher, in menu select File, Add Existing Application, choose the folder C:\TEMP\KaipZubko and add it. Select your application in list. You should see somewhat like:
+![Круто?](https://github.com/r-pankevicius/KaipZubko/blob/master/doc/img/gae-launcher.png "Круто?")
 
-![Nice UI, isn't it?](https://github.com/r-pankevicius/KaipZubko/blob/master/doc/img/gae-launcher.png "Nice UI, isn't it?")
+Жми "Deploy". Программа попросит тебя сделать логин. Потом подожди пока она скажет "You can close this window now".
 
-Press "Deploy" button and deploy it to mykaipzubko.appspot.com. The program will ask you to login with google account. Wait till it succeeds telling that "You can close this window now".
+###Шаг 6. Запусти "Kaip Zubko!" веб сайт на mykaipzubko.appspot.com
+Иди на https://appengine.google.com/, выбери свой аппс, жми "Versions" tab активизируй версию (Make default).
 
-###STEP 6. Run "Kaip Zubko!" on mykaipzubko.appspot.com
-Go to https://appengine.google.com/, select your application, open Versions tab and make uploaded version of your application the default one.
-
-That's all. Now you have a "Kaip Zubko!" server running on http://mykaipzubko.appspot.com.
-
-###Final words
-Share with care!
+Вот и всё, довольно просто у нас всё получилось. У тебя уже есть твой клауд веб сайт "Как Зубко!".
