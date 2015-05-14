@@ -2,11 +2,14 @@
 
 Next generation of distributed file sharing.
 
-###### Inpatient?
+###### EN: Inpatient?
 Go to [quick install guide](./doc/install-en.md).
 
-###### Lietuvis?
+###### LT: Lietuvis?
 Rimti bičiukai spaudžia [čia](./doc/install-lt.md).
+
+###### RU: Наш человек инструкцию по инсталяций пока что-то неломается не читает!
+И [всё таки...](./doc/install-ru.md).
 
 ###### Demo (Live!)
 See how HTML 5 compliant [Admin UI gracefully falls back to classic HTML on legacy browsers](http://kaipzubko.appspot.com/get/5639445604728832/admin-ui-v1.png).
