@@ -3,7 +3,7 @@ Naujos kartos failų šarinimo sistema.
 
 <i>"Šitie vaikinai sėja velnio sėklą."</i><br/>
  Iš slaptos VSD pažymos Grybauskaitei ir Radijošou kronikų.<br/>
- <!--
+ <!---
  Kodėl aš negimiau Uzbekistane?
  Trolinčiau tą naglą kazachą Boratą ir būčiau padsose pas Amžinąjį Prezidentą.
  -->
