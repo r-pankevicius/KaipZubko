@@ -3,9 +3,12 @@ Naujos kartos failų šarinimo sistema.
 
 <i>"Šitie vaikinai sėja velnio sėklą."</i><br/>
  Iš slaptos VSD pažymos Grybauskaitei ir Radijošou kronikų.<br/>
- >Kodėl aš negimiau Uzbekistane?<br/>
+ <!--
+ Kodėl aš negimiau Uzbekistane?
+ Trolinčiau tą naglą kazachą Boratą ir būčiau padsose pas Amžinąjį Prezidentą.
+ -->
 
-Tuoj įdiegsim (jei man į snukį neduosit už šitą žodį), maždaug per 20-60 minučių ir pašarinsit ne blogiau už patį Zubko!
+Tuoj įdiegsim: maždaug per 20-60 minučių ir pašarinsit ne blogiau už patį Zubko!
 
 Tik rimtiems bachūriukams!
 
