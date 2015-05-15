@@ -6,7 +6,7 @@ Naujos kartos failų šarinimo sistema.
  <!---
  Kodėl aš negimiau Uzbekistane?
  Trolinčiau tą naglą kazachą Boratą ir būčiau padsose pas Amžinąjį Prezidentą.
- -->
+ --->
 
 Tuoj įdiegsim: maždaug per 20-60 minučių ir pašarinsit ne blogiau už patį Zubko!
 
