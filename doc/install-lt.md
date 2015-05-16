@@ -44,3 +44,6 @@ Spausk "Deploy" mygtuką ir siųsk visą kodą į mykaipzubko.appspot.com. Kai p
 Eik į https://appengine.google.com/, pasirink savo programą (turbūt vienintelę, sunku nebus), spausk Versions ir aktyvuok ką tik nusiųstą versiją: mygtukas "Make Default".
 
 Viskas. Dabar tu turi "Kaip Zubko!" serveriuką ant http://mykaipzubko.appspot.com. Siųsk ten savo failiukus ir duok draugeliams linkus.
+
+###OO. Paskaityk:
+Šiais visuotiniais interneto ir socialinių tinklų išplitimo laikais tarp daugybės pačių keisčiausių, neretai – beverčių, kvailokų ar net abejoti informacijos patikimumu verčiančių straipsnių ir rašinėlių, virtualiojoje džiunglių tankmėje vis dar pasitaiko aptikti tikrų deimančiukų, sugebančių nustebinti autorių įžvalgomis bei itin tiksliomis prognozėmis.
