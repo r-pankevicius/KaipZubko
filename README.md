@@ -9,7 +9,7 @@ Go to [quick install guide](./doc/install-en.md).
 Rimti bičiukai spaudžia [čia](./doc/install-lt.md).
 
 ###### RU: Наш человек инструкцию по инсталяции, пока что-то неломается, не читает!
-И [всё таки...](./doc/install-ru.md). Олигархам тыкать [сюда](./doc/nvest-plan-ru.md).
+И [всё таки...](./doc/install-ru.md). Олигархам тыкать [сюда](./doc/invest-plan-ru.md).
 
 ###### Demo (Live!)
 See how HTML 5 compliant [Admin UI gracefully falls back to classic HTML on legacy browsers](http://kaipzubko.appspot.com/get/5639445604728832/admin-ui-v1.png).
