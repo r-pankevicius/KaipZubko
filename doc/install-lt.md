@@ -20,7 +20,7 @@ Eik į https://appengine.google.com ir užsiregistruok. Gausi SMS ir įvesi, kur
 Kai galėsi įsiloginti į https://appengine.google.com, sukurk savo "aplikaciją". Reikės pasirinkti tokį vardą (application id), kad kiti lochai nežinotų. Pabandyk mykaipzubko iš pradžių, bet jei kitas bičiuks jį jau užėmė, sugalvok kitokį.
 
 ###2. Parsisiųsk slaptą "Kaip Zubko!" kodą
-Eik į https://github.com/r-pankevicius/KaipZubko ir spaus "Download zip" (kažkur dešinėj). (Ir jei koks lochelis tau kada nors sakys, kad reikia žinoti, kas yra <code>git clone</code>, tai tu žinai, ką jam atsakyti. Tiesus-trumpas. Apie ką su juo daugiau šnekėti?)
+Eik į https://github.com/r-pankevicius/KaipZubko ir spaus "Download zip" (kažkur dešinėj). Ir jei koks lochelis tau kada nors sakys, kad reikia žinoti, kas yra <code>git kloūn</code>, tai tu žinai, ką jam atsakyti. Nu, palauk, kol jis pasigirs, kad su tuo gitu jis ir merginti moka. Nu, jei jis ir turi kokia mergike, tai jos vards baigiasi jpg. Apie ką su juo daugiau šnekėti?
 Parsisiuntęs spausk dešinį pelės mygtuką ir "Unblock". Virusų mes nerašom, nemyžk į kelnes.
 Išzipuok jį C:\TEMP\KaipZubko.
 Atsidaryk app.yaml su kokiu notepadu ir pakeisk <code>application</code> pirmoj eilutėj iš "kaipzubko" (nu, mes ne lochai, tokį gerą vardą jau užėmėm) į tavo vardą (nu, į mykaipzubko, jei buvai greits).
