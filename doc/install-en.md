@@ -51,3 +51,6 @@ That's all. Now you have a "Kaip Zubko!" server running on http://mykaipzubko.ap
 
 ###Final words
 Share with care!
+
+###Beware!
+If you decided to play with this toy please read this: Don't use services of fortune tellers. They will give you an answer you want to hear in exchange to information about your life.
