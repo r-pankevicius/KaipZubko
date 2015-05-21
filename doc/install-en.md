@@ -53,4 +53,4 @@ That's all. Now you have a "Kaip Zubko!" server running on http://mykaipzubko.ap
 Share with care!
 
 ###Beware!
-If you decided to play with this toy please read this: Don't use services of fortune tellers. They will give you an answer you want to hear in exchange to information about your life.
+If you decided to play with this toy please read this: Don't use services of fortune tellers. They will give you an answer you want to hear in exchange to information about your life. Be especially careful with sites similar to meaningorigin.com which even advertises it's "reverse whois" service as true whois.
