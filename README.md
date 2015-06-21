@@ -3,7 +3,7 @@
 Next generation of distributed file sharing.
 
 ###### EN: Inpatient?
-Go to [quick install guide](./doc/install-en.md).
+Developers can jump to [quick install guide](./doc/install-en.md). Info for investors is [here](.doc/for-investors-en.md).
 
 ###### LT: Lietuvis?
 Rimti bičiukai spaudžia [čia](./doc/install-lt.md).
