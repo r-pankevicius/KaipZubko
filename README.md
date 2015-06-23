@@ -1,4 +1,6 @@
-﻿###Kaip Zubko!
+<i>Parental advisory: this softare may contain traces of explicit content. </i>
+
+###Kaip Zubko!
 
 Next generation of distributed file sharing.
 
