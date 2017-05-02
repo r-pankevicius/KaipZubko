@@ -1,20 +1,13 @@
 <i>Parental advisory: this softare may contain traces of explicit content. </i>
 
-###Kaip Zubko!
+### Kaip Zubko!
 
 Next generation of distributed file sharing.
 
-###### EN: Inpatient?
-Developers can jump to [quick install guide](./doc/install-en.md). Info for investors is [here](./doc/for-investors-en.md).
-
-###### LT: Lietuvis?
-Rimti bičiukai spaudžia [čia](./doc/install-lt.md).
-
-###### RU: Наш человек инструкцию по инсталяции, пока что-то неломается, не читает!
-И [всё таки...](./doc/install-ru.md). Олигархам тыкать [сюда](./doc/invest-plan-ru.md).
+Developers can jump to [quick install guide](./doc/install-en.md).
 
 ###### Demo (Live!)
-See how HTML 5 compliant [Admin UI gracefully falls back to classic HTML on legacy browsers](http://kaipzubko.appspot.com/get/5639445604728832/admin-ui-v1.png).
+See how HTML 5 compliant [Admin UI gracefully falls back to classic HTML on legacy browsers](http://kaipzubko.appspot.com/5639445604728832/admin-ui-v1.png).
 
 ###### Uniqueness (compared to our CDN competitors et al.)
 You can change file name you access and get.
